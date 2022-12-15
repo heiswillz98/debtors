@@ -6,7 +6,7 @@
   "scripts": {
     "maten": "nodemon server.js",
     "start": "node server.js",
-    "build": "webpack-cli (https://github.com/webpack/webpack-cli)"
+    "build": "node server.js"
   },
   "repository": {
     "type": "git",
