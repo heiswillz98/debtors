@@ -99,9 +99,37 @@ app.get("/register", checkNotAuthenticated, (req, res) => {
 app.get("/dashboard", checkAuthenticated, (req, res) => {
   res.render("dashboard.ejs", { name: req.user.name });
 });
+app.get("/notification", checkAuthenticated, (req, res) => {
+  res.render("notification.ejs", { name: req.user.name });
+});
 
+app.get("/addadebtor", checkAuthenticated, (req, res) => {
+  res.render("addadebtor.ejs", { name: req.user.name });
+});
+app.get("/settings", checkAuthenticated, (req, res) => {
+  res.render("settings.ejs", { name: req.user.name });
+});
+
+app.get("/faq", checkAuthenticated, (req, res) => {
+  res.render("faq.ejs", { name: req.user.name });
+});
+
+app.get("/contendlist", checkAuthenticated, (req, res) => {
+  res.render("contendlist.ejs", { name: req.user.name });
+});
+
+app.get("/contendform", checkAuthenticated, (req, res) => {
+  res.render("contendform.ejs", { name: req.user.name });
+});
+
+app.get("/schools", checkAuthenticated, (req, res) => {
+  res.render("Schools.ejs", { name: req.user.name });
+});
 app.get("/profile", checkAuthenticated, (req, res) => {
   res.render("profile.ejs", { name: req.user.name });
+});
+app.get("/drop-c", checkAuthenticated, (req, res) => {
+  res.render("drop-c.ejs", { name: req.user.name });
 });
 
 app.get("/editprofile", checkAuthenticated, (req, res) => {
